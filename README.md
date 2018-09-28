@@ -1,2 +1,2 @@
 # Mixins
-Implement multiple inheritence in TypeScripts with using Mixins
+Implement multiple inheritance  in TypeScript using Mixins
