@@ -17,8 +17,7 @@ var Perimeter = /** @class */ (function () {
     return Perimeter;
 }());
 //class Rectangle uses implement instead of using extends
-//this means two class traets as interface and 
-//class Rectangle should be implement two classes
+//this means two class traets as interface and class Rectangle should be implement two classes
 //by using mixins we avoid the implementation
 var Rectangle = /** @class */ (function () {
     function Rectangle(length, width) {
@@ -40,6 +39,7 @@ function applyMixins(derivedCtor, baseCtors) {
         });
     });
 }
+//replacing the exact functions and propertiese implementation of base class in the child class
 applyMixins(Rectangle, [Area, Perimeter]);
 var rectangle = new Rectangle(7, 8);
 console.log("Area: " + rectangle.Area());
