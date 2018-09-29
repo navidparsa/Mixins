@@ -1,3 +1,5 @@
+//class Area and class Perimeter act as our mixins,
+//each one is focoused on special capability
 var Area = /** @class */ (function () {
     function Area() {
     }
@@ -14,6 +16,10 @@ var Perimeter = /** @class */ (function () {
     };
     return Perimeter;
 }());
+//class Rectangle uses implement instead of using extends
+//this means two class traets as interface and 
+//class Rectangle should be implement two classes
+//by using mixins we avoid the implementation
 var Rectangle = /** @class */ (function () {
     function Rectangle(length, width) {
         this.lenght = length;
