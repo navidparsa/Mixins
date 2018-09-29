@@ -1,3 +1,4 @@
+//As defined in Wikipedia, a mixin is a class that contains methods for use by other classes without having to be the parent class of those other classes.
 //class Area and class Perimeter act as our mixins,
 //each one is focoused on special capability
 class Area {
