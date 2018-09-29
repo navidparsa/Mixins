@@ -10,7 +10,7 @@ class Perimeter {
         return 2 * (length + width);
     }
 }
-//class Rectangle uses implement instead of using extends
+//class Rectangle uses implements instead of using extends
 //this means two class traets as interface and class Rectangle should be implement two classes
 //by using mixins we avoid the implementation
 class Rectangle implements Area, Perimeter {
@@ -22,7 +22,7 @@ class Rectangle implements Area, Perimeter {
     }
     //we should implement properties and funcions of base class in the rectangle class to avoid error
     //simple implement is satisfactory
-    //in the runtime these implementation replacing with the exact implementation of functions and properties in the base classes  
+    //in the runtime these implementation replacing with the exact implementation of functions and properties in  base classes  
     getArea: (length: number, width: number) => number;
     getPerimeter: (length: number, width: number) => number;
     Area() {
