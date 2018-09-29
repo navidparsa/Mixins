@@ -11,8 +11,7 @@ class Perimeter {
     }
 }
 //class Rectangle uses implement instead of using extends
-//this means two class traets as interface and 
-//class Rectangle should be implement two classes
+//this means two class traets as interface and class Rectangle should be implement two classes
 //by using mixins we avoid the implementation
 class Rectangle implements Area, Perimeter {
     lenght: number;
@@ -21,8 +20,9 @@ class Rectangle implements Area, Perimeter {
         this.lenght = length;
         this.width = width;
     }
-    //we should implement properties and funcions of base class in the rectangle class.
-    //in the runtime these implementation replacing with the exact implementation of function and properties in the base classes  
+    //we should implement properties and funcions of base class in the rectangle class to avoid error
+    //simple implement is satisfactory
+    //in the runtime these implementation replacing with the exact implementation of functions and properties in the base classes  
     getArea: (length: number, width: number) => number;
     getPerimeter: (length: number, width: number) => number;
     Area() {
@@ -41,7 +41,7 @@ function applyMixins(derivedCtor, baseCtors) {
     });
 }
 
-
+//replacing the exact functions and propertiese implementation of base class in the child class
 applyMixins(Rectangle, [Area, Perimeter])
 let rectangle = new Rectangle(7, 8);
 console.log(`Area: ${rectangle.Area()}`);
